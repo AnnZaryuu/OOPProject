@@ -1,12 +1,15 @@
 <?php
 
-//Aggregation
-class EmailUser{
-    Public $email;
-    public function __construct($email) { 
-        $this->email = $email; }
+// Aggregation
+class EmailUser {
+    public $email;
+    public $userName;
+    
+    public function __construct($email, $userName) { 
+        $this->email = $email; 
+        $this->userName = $userName;
+    }
 }
-
 
 class Role {
     public $role_id;
@@ -14,8 +17,8 @@ class Role {
     public $role_description;
     public $role_status;
     public $email;
-
-    public function __construct($role_id, $role_name, $role_description, $role_status,EmailUser $email_user) {
+    
+    public function __construct($role_id, $role_name, $role_description, $role_status, EmailUser $email_user) {
         $this->role_id = $role_id;
         $this->role_name = $role_name;
         $this->role_description = $role_description;
