@@ -1,4 +1,6 @@
 <?php
+
+
 class Role {
     public $role_id;
     public $role_name;
