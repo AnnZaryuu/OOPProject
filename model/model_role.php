@@ -31,6 +31,10 @@ require_once 'domain_object/node_role.php' ;
         $_SESSION['Roles'] = serialize( $this->Roles );
     }
 
+    public function getRole(){
+        return $this->Roles;
+    }
+
     public function GetAllRoles(){
         return $this->Roles;
     }
