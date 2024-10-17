@@ -71,7 +71,7 @@ require_once 'domain_object/node_role.php' ;
 
     public function getRoleByName($name){
         foreach ($this->Roles as $Role) {
-            if ($Role->name == $name) {
+            if ($Role->role_name == $name) {
                 return $Role;
             }
 
