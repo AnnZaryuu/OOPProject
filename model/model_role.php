@@ -17,12 +17,12 @@ require_once 'domain_object/node_role.php' ;
             }
     }
     public function initializeDefaultRole(){
-        $this->AddRole('Anjar','Mahasiswa', 1,new EmailUser('Anjarl@gmail.com', 'Anjar LL'));
+        $this->AddRole('Anjar','Mahasiswa', 1);
 
     }
 
-    public function AddRole($name, $description, $role_status, $emailUsername){
-        $peran = new Role($this->Nextid++,$name, $description, $role_status, $emailUsername);
+    public function AddRole($name, $description, $role_status){
+        $peran = new Role($this->Nextid++,$name, $description, $role_status);
         $this->Roles [] = $peran;
         $this->SaveToSesion();
     }
