@@ -43,22 +43,22 @@
                         </thead>
                         <tbody class="text-gray-700">
                             <!-- Baris Data Dinamis -->
-                            <?php foreach ($obj_role as $role) : ?>
-                                <tr class="text-center">
-                                    <td class="py-3 px-4 text-blue-600"><?php echo htmlspecialchars($role->role_id); ?></td>
-                                    <td class="w-1/4 py-3 px-4"><?php echo htmlspecialchars($role->role_name); ?></td>
-                                    <td class="w-1/3 py-3 px-4"><?php echo htmlspecialchars($role->role_description); ?></td>
-                                    <td class="w-1/6 py-3 px-4"><?php echo htmlspecialchars($role->role_status); ?></td>
-                                    <td class="w-1/6 py-3 px-4">
-                                        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded mr-2">
-                                            <a href="#">Ubah</a>
-                                        </button>
-                                        <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded mr-2">
-                                            <a href="#">Hapus</a>
-                                        </button>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
+                                    <?php foreach ($roles as $role) : ?>
+                                        <tr class="text-center">
+                                            <td class="py-3 px-4 text-blue-600"><?php echo htmlspecialchars($role->role_id); ?></td>
+                                            <td class="w-1/4 py-3 px-4"><?php echo htmlspecialchars($role->role_name); ?></td>
+                                            <td class="w-1/3 py-3 px-4"><?php echo htmlspecialchars($role->role_description); ?></td>
+                                            <td class="w-1/6 py-3 px-4"><?php echo htmlspecialchars($role->role_status); ?></td>
+                                            <td class="w-1/6 py-3 px-4">
+                                                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 rounded mr-2">
+                                                    <a href="edit_role.php?id=<?php echo htmlspecialchars($role->role_id); ?>">Ubah</a>
+                                                </button>
+                                                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded mr-2">
+                                                    <a href="delete_role.php?id=<?php echo htmlspecialchars($role->role_id); ?>">Hapus</a>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
