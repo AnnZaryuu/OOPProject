@@ -2,7 +2,7 @@
 
 require_once 'domain_object/node_role.php';
 
-class CompositeRole extends Role {
+class Inharitance_Role extends Role {
     private $subRoles = [];
     public $salary;
 

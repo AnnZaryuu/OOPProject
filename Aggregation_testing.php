@@ -1,8 +1,6 @@
 <?php
 require_once 'Model\aggregation_model.php';
 
-echo "=== TESTING AGGREGATION MODEL ===<br>";
-
 
 $email1 = new EmailUser("Annzaryuu28993@gmail.com");
 $email2 = new EmailUser("ashdaskdjgaj@gmail.com");

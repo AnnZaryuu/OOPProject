@@ -6,7 +6,7 @@ class RoleModel {
     private $roles = [];
 
     public function tambahRole($idPeran, $namaPeran, $descPeran, $statusPekerjaan, $salary) {
-        $role = new CompositeRole($idPeran, $namaPeran, $descPeran, $statusPekerjaan, $salary);
+        $role = new Inharitance_Role($idPeran, $namaPeran, $descPeran, $statusPekerjaan, $salary);
         $this->roles[] = $role;
     }
 
